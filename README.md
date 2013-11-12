@@ -1,4 +1,4 @@
-bootstrap-extra
+Bootstrap Extra
 ===============
 
-Bootstrap Extra
+Little things which hepls a lot.
