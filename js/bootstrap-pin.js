@@ -39,7 +39,6 @@
     this.$element = $(element).wrap('<div>')
     this.$container = $(options.container).css('position', 'relative')
     this.spacing = (this.$container.outerHeight() - this.$container.height()) / 2
-    console.log(this.spacing)
     this.pinned = false
 
     this.uid = 'id' + Math.random().toString(36).substr(2, 9)
