@@ -1,4 +1,4 @@
 Bootstrap Extra
 ===============
 
-Little things which hepls a lot.
+Little things which hepl a lot.
