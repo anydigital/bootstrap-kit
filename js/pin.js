@@ -41,7 +41,7 @@
     this.spacing = (this.$container.outerHeight() - this.$container.height()) / 2
     this.pinned = false
 
-    this.uid = 'id' + Math.random().toString(36).substr(2, 9)
+    this.uid = 'id-' + Math.random().toString(36).substr(2, 9)
     this.$element.addClass(this.uid)
     this.$style = $('<style>')
     $('head').append(this.$style)
