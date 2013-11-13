@@ -1,73 +1,111 @@
-/* ==========================================================
- * bootstrap-pin.js v2.3.2.1
+/* ========================================================================
+ * Bootstrap Extra: pin.js v0.1.x
  * http://tonystar.ru/projects/bootstrap-extra#pin
- * ==========================================================
+ * ========================================================================
+ * The MIT License (MIT)
+ *
  * Copyright (c) 2013 Anton Staroverov
- * ========================================================== */
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * ======================================================================== */
 
 
-!function ($) {
++function ($) { "use strict";
 
-  "use strict"; // jshint ;_;
-
-
- /* PIN CLASS DEFINITION
-  * ==================== */
+  // PIN CLASS DEFINITION
+  // ====================
 
   var Pin = function (element, options) {
-    this.options = $.extend({}, $.fn.pin.defaults, options)
-    this.$document = $(document)
-      .on('change.pin.data-api', $.proxy(this.init, this))
+    this.options = $.extend({}, Pin.DEFAULTS, options)
     this.$window = $(window)
-      .on('resize.pin.data-api', $.proxy(this.init, this))
-    this.$container = $(options.container).css('position', 'relative')
-    this.$element = $(element).addClass('pin').wrap('<div>')
-    this.offset = {}
+      .on('resize.bs.pin.data-api', $.proxy(this.checkOffsets, this))
+      .on('scroll.bs.pin.data-api', $.proxy(this.checkPosition, this))
 
-    this.init()
+    this.$element = $(element).wrap('<div>')
+    this.$container = $(options.container).css('position', 'relative')
+    this.spacing = (this.$container.outerHeight() - this.$container.height()) / 2
+    console.log(this.spacing)
+    this.pinned = false
+
+    this.uid = 'id' + Math.random().toString(36).substr(2, 9)
+    this.$element.addClass(this.uid)
+    this.$style = $('<style>')
+    $('head').append(this.$style)
+
+    this.checkOffsets()
+    this.checkPosition()
   }
 
-  Pin.prototype.init = function () {
-    var offset = {
-      top: this.$element.parent().offset().top
-    , bottom: this.$document.height() - this.$container.offset().top - this.$container.height()
-    }
-    if (offset == this.offset) return
-    this.offset = offset
+  Pin.RESET = 'pin pin-top pin-bottom'
 
+  Pin.DEFAULTS = {
+    container: 'body'
+  }
+
+  Pin.prototype.checkOffsets = function () {
     // Set the proper width to the element:
     this.$element.width(this.$element.parent().width())
 
-    // Affix the element using Bootstrap Affix:
-    this.$element.affix({offset: offset})
+    // Set proper margins for the pinned element:
+    this.$style.html([
+      '.' + this.uid + '.pin { top: ' + this.spacing + 'px }'
+    , '.' + this.uid + '.pin-bottom { bottom: ' + this.spacing + 'px }'
+    ].join('\n'))
+
+    this.minOffset = this.$element.parent().offset().top - this.spacing
+    this.maxOffset = this.$container.offset().top + this.$container.height() - this.$element.height()
+  }
+
+  Pin.prototype.checkPosition = function () {
+    if (!this.$element.is(':visible')) return
+
+    var currentOffset = this.$window.scrollTop()
+
+    var pin = currentOffset < this.minOffset ? 'top' :
+              currentOffset < this.maxOffset ? false : 'bottom'
+
+    if (this.pinned == pin) return
+
+    this.pinned = pin
+
+    this.$element.removeClass(Pin.RESET).addClass('pin' + (pin ? '-' + pin : ''))
   }
 
 
- /* PIN PLUGIN DEFINITION
-  * ===================== */
+  // PIN PLUGIN DEFINITION
+  // =====================
 
   var old = $.fn.pin
 
-  $.fn.pin = function (option) {
+  $.fn.pin = function (options) {
     return this.each(function () {
       var $this = $(this)
-        , data = $this.data('pin')
-        , options = typeof option == 'object' && option
+      var data  = $this.data('bs.pin')
 
-      if (!data) $this.data('pin', (data = new Pin(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (!data) $this.data('bs.pin', (data = new Pin(this, options)))
     })
   }
 
   $.fn.pin.Constructor = Pin
 
-  $.fn.pin.defaults = {
-    container: 'body'
-  }
 
-
- /* PIN NO CONFLICT
-  * =============== */
+  // PIN NO CONFLICT
+  // ===============
 
   $.fn.pin.noConflict = function () {
     $.fn.pin = old
@@ -75,24 +113,23 @@
   }
 
 
- /* PIN DATA-API
-  * ============ */
+  // PIN DATA-API
+  // ============
 
   $(function () {
     $('head').append($('<style>').html([
-      '.pin.affix-top { position: static }'
-    , '.pin.affix { position: fixed; top: 0; bottom: auto }'
-    , '.pin.affix-bottom { position: absolute; top: auto; bottom: 0 }'
+      '.pin-top { position: static }'
+    , '.pin { position: fixed; top: 0; bottom: auto }'
+    , '.pin-bottom { position: absolute; top: auto; bottom: 0 }'
     ].join('\n')))
   })
   $(window).on('load', function () {
     $('[data-spy="pin"]').each(function () {
       var $this = $(this)
-        , data = $this.data()
+      var data = $this.data()
 
       $this.pin(data)
     })
   })
 
-
-}(window.jQuery);
+}(jQuery);

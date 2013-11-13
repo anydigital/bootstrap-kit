@@ -2,38 +2,96 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8" />
-    <title>Bootstrap Extra</title>
+    <title>Bootstrap Pin</title>
     <meta name="generator" content="WebStarter (http://tonystar.ru/projects/webstarter)" />
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" media="all" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
+    <style>
+      body {
+        padding: 1em 0;
+      }
+      .well {
+        margin: 0;
+      }
+      .thumbnail {
+        background: white;
+      }
+      .zone {
+        padding: 1em 0;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <br />
-      <header class="well">HEADER</header>
-      <br />
-      <div class="main">
-        <div class="row-fluid">
-          <aside class="span3">
-            <div data-spy="pin" data-container=".main">
-              <div class="well">
-                PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED
-                PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED
-                PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED
-                PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED PINNED
+      <!-- HEADER -->
+      <header class="zone">
+        <div class="well">
+          <h1>FRUITS</h1>
+        </div>
+      </header>
+      <!-- KIWI -->
+      <div class="zone">
+        <div class="well well-kiwi">
+          <div class="row-fluid">
+            <section class="span9">
+              <p style="height: 1500px">LONG LONG KIWI DESCRIPTION</p>
+            </section>
+            <aside class="span3">
+              <div data-spy="pin" data-container=".well-kiwi">
+                <div class="thumbnail">
+                  <img src="./images/kiwi.sq.jpg" />
+                </div>
               </div>
-            </div>
-          </aside>
-          <section class="span9">
-            <div class="well" style="height: 1000px">CONTENT</div>
-          </section>
+            </aside>
+          </div>
         </div>
       </div>
-      <br />
-      <div class="well" style="height: 1000px">BOTTOM</div>
-      <br />
-      <footer class="well">FOOTER</footer>
-      <br />
+      <!-- BANANA -->
+      <div class="zone">
+        <div class="well well-banana">
+          <div class="row-fluid">
+            <aside class="span3">
+              <div data-spy="pin" data-container=".well-banana">
+                <div class="thumbnail">
+                  <img src="./images/banana.sq.jpg" />
+                </div>
+              </div>
+            </aside>
+            <section class="span9">
+              <p style="height: 500px">LONG LONG BANANA DESCRIPTION</p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- LYCHEE -->
+      <div class="zone">
+        <div class="well well-lychee">
+          <div class="row-fluid">
+            <section class="span9">
+              <p style="height: 500px">LONG LONG LYCHEE DESCRIPTION</p>
+            </section>
+            <aside class="span3">
+              <div data-spy="pin" data-container=".well-lychee">
+                <div class="thumbnail">
+                  <img src="./images/lychee.sq.jpg" />
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <!-- BOTTOM -->
+      <div class="zone">
+        <div class="well">
+          <p style="height: 1000px">BOTTOM</p>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <footer class="zone">
+        <div class="well">
+          Copyright &copy; 2013 Fruits, Inc
+        </div>
+      </footer>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
