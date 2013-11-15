@@ -1,7 +1,7 @@
 /* ========================================================================
- * Bootstrap Extra: pin.js v0.1.x
+ * Bootstrap Extra: pin.js v0.0.x
  * http://tonystar.ru/projects/bootstrap-extra#pin
- * ========================================================================
+ * ------------------------------------------------------------------------
  * The MIT License (MIT)
  *
  * Copyright (c) 2013 Anton Staroverov
