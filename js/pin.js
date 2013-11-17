@@ -117,13 +117,6 @@
   // PIN DATA-API
   // ============
 
-  $(function () {
-    $('head').append($('<style>').html([
-      '.pin-top { position: static }'
-    , '.pin { position: fixed; top: 0; bottom: auto }'
-    , '.pin-bottom { position: absolute; top: auto; bottom: 0 }'
-    ].join('\n')))
-  })
   $(window).on('load', function () {
     $('[data-spy="pin"]').each(function () {
       var $this = $(this)
