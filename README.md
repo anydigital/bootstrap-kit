@@ -3,7 +3,7 @@ Bootstrap Extra
 
 Bootstrap Extra is a Twitter Bootstrap extension implementing some extra features which are not available with the plain framework.
 
-## Pin <small>pin.js</small>
+## Pin plugin
 
 Pin plugin is a fully automated and advanced version of the Bootstrap built-in [affix plugin](http://getbootstrap.com/javascript/#affix).
 
