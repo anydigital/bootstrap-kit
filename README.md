@@ -27,9 +27,11 @@ To easily add pin behavior to any element, just add `data-spy="pin"` to the elem
 
 Call the pin plugin via JavaScript:
 
-    $('.id-sidebar').pin({
-      container: '.id-content'
-    })
+~~~
+$('.id-sidebar').pin({
+  container: '.id-content'
+})
+~~~
 
 
 ### Options
