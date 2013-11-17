@@ -1,23 +1,27 @@
-Bootstrap Extra
-===============
+# [Bootstrap Extra](http://tonystar.ru/projects/bootstrap-extra)
 
 Bootstrap Extra is a Twitter Bootstrap extension implementing some extra features which are not available with the plain framework.
+
 
 ## Pin plugin
 
 Pin plugin is a fully automated and advanced version of the Bootstrap built-in [affix plugin](http://getbootstrap.com/javascript/#affix).
 
+
 ### Example
 
 [Demo](http://tonystar.github.io/bootstrap-extra/demo/pin.html)
 
+
 ### Usage
+
 
 #### Via data attributes
 
 To easily add pin behavior to any element, just add `data-spy="pin"` to the element you want to spy on. Then use a container selector to define to which element to pin.
 
     <div class="id-sidebar" data-spy="pin" data-container=".id-content">...</div>
+
 
 #### Via JavaScript
 
@@ -26,6 +30,7 @@ Call the pin plugin via JavaScript:
     $('.id-sidebar').pin({
       container: '.id-content'
     })
+
 
 ### Options
 
