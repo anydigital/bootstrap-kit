@@ -1,0 +1,10 @@
+/*!
+ * Bootstrap Extra v1.0.0
+ * http://tonystar.ru/projects/bootstrap-extra
+ *
+ * Copyright (c) 2013 Anton Staroverov
+ * http://tonystar.ru
+ *
+ * Licensed under http://opensource.org/licenses/MIT
+ */
+.pin-top{position:static}.pin{position:fixed;top:0;bottom:auto}.pin-bottom{position:absolute;top:auto;bottom:0}
