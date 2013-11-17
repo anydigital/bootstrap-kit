@@ -1,7 +1,7 @@
 Bootstrap Extra
 ===============
 
-Bootstrap Extra is a Twitter Bootstrap extension implementing some extra features which are not available with the plain Bootstrap framework.
+Bootstrap Extra is a Twitter Bootstrap extension implementing some extra features which are not available with the plain framework.
 
 ## Pin <small>pin.js</small>
 
@@ -31,6 +31,17 @@ Call the pin plugin via JavaScript:
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-container=".id-content"`.
 
-Name | Type | Default | Description
--- | -- | -- | --
-container | string | "body" | Container selector of an element to which to pin.
+<table>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Default</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td>container</td>
+  <td>string</td>
+  <td>"body"</td>
+  <td>Container selector of an element to which to pin.</td>
+</tr>
+</table>
