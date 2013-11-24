@@ -5,50 +5,29 @@ Bootstrap Extra is a Twitter Bootstrap extension implementing some extra feature
 
 ## Pin plugin
 
-Pin plugin is a fully automated and advanced version of the Bootstrap built-in [affix plugin](http://getbootstrap.com/javascript/#affix).
+Fully automated and advanced version of the Bootstrap built-in [Affix plugin](http://getbootstrap.com/javascript/#affix).</td>
+
+[Docs](http://tonystar.ru/projects/bootstrap-extra#pin) | [Demo](http://tonystar.github.io/bootstrap-extra/#pin)
 
 
-### Example
+## Marketing styles
 
-[Demo](http://tonystar.github.io/bootstrap-extra/demo/pin.html)
+Set of marketing-friendly styles for promo blocks and pages.
 
-
-### Usage
-
-
-#### Via data attributes
-
-To easily add pin behavior to any element, just add `data-spy="pin"` to the element you want to spy on. Then use a container selector to define to which element to pin.
-
-    <div class="id-sidebar" data-spy="pin" data-container=".id-content">...</div>
+[Docs](http://tonystar.ru/projects/bootstrap-extra#mkt) | [Demo](http://tonystar.github.io/bootstrap-extra/#mkt)
 
 
-#### Via JavaScript
+## Utilities
 
-Call the pin plugin via JavaScript:
+Set of utility classes for easier web development:
 
-~~~
-$('.id-sidebar').pin({
-  container: '.id-content'
-})
-~~~
+* `.size-*` - to change text size (relatively)
+* `.trim` - to remove unnecessary margins from the first and last childs
+* `.conceal` - to hide element from visitors but not from search engines
+* ...
 
+[Docs](http://tonystar.ru/projects/bootstrap-extra#utils) | [Demo](http://tonystar.github.io/bootstrap-extra/#utils)
 
-### Options
+* * *
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-container=".id-content"`.
-
-<table>
-<tr>
-  <th>Name</th>
-  <th>Type</th>
-  <th>Default</th>
-  <th>Description</th>
-</tr>
-<tr>
-  <td>container</td>
-  <td>string</td>
-  <td>"body"</td>
-  <td>Container selector of an element to which to pin.</td>
-</tr>
-</table>
+Latest version: **v1.1.0** | [Download](https://github.com/tonystar/bootstrap-extra/archive/v1.1.0.zip) | [Docs](http://tonystar.ru/projects/bootstrap-extra) | [Demo](http://tonystar.github.io/bootstrap-extra/)
