@@ -2,100 +2,147 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8" />
-    <title>Bootstrap Pin</title>
+    <title>Bootstrap Extra</title>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="WebStarter (http://tonystar.ru/projects/webstarter)" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="./less/utilities.less" rel="stylesheet/less" />
+    <link href="./less/bootstrap-extra.less" rel="stylesheet/less" />
     <style>
       body {
-        padding: 1em 0;
+        padding: 1.5em 0;
       }
-      .well {
-        margin: 0;
+      .nav .active {
+        font-weight: bold;
+      }
+      .well hr {
+        border-style: dashed;
+        border-color: silver;
       }
       .thumbnail {
-        background: white;
         margin: 0;
-      }
-      .zone {
-        padding: 1em 0;
       }
     </style>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".id-sidenav">
+    <a href="https://github.com/tonystar/bootstrap-extra" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
     <div class="container">
-      <!-- HEADER -->
-      <header class="zone">
-        <div class="well">
-          <h1>SCROLL DOWN</h1>
-        </div>
-      </header>
-      <!-- KIWI -->
-      <div class="zone">
-        <div class="well well-kiwi">
-          <div class="row">
-            <section class="col-md-9">
-              <p style="height: 1500px">LONG LONG KIWI DESCRIPTION</p>
-            </section>
-            <aside class="col-md-3">
-              <div data-spy="pin" data-container=".well-kiwi">
-                <div class="thumbnail">
-                  <img src="./media/kiwi.qsvga.jpg" />
+      <h1 class="text-center">Bootstrap Extra <small>v0.0.2</small></h1>
+      <hr />
+      <div class="id-wrapper">
+        <div class="row">
+          <aside class="col-md-3">
+            <div class="id-sidenav" data-spy="pin" data-container=".id-wrapper">
+              <ul class="nav">
+                <li><a href="#pin">Pin</a></li>
+                <li><a href="#mkt">Marketing</a></li>
+                <li><a href="#utils">Utilities</a></li>
+              </ul>
+            </div>
+          </aside>
+          <section class="col-md-9">
+            <!---->
+            <h2 id="pin">Pin <small>pin.js</small></h2>
+            <p>Scroll down to see the effect:</p>
+            <div class="well text-justify">
+              <div class="id-pin-kiwi">
+                <div class="row">
+                  <aside class="col-md-3">
+                    <div data-spy="pin" data-container=".id-pin-kiwi">
+                      <img src="./media/kiwi.qsvga.jpg" class="thumbnail" />
+                    </div>
+                  </aside>
+                  <section class="col-md-9 trim">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                  </section>
                 </div>
               </div>
-            </aside>
-          </div>
-        </div>
-      </div>
-      <!-- BANANA -->
-      <div class="zone">
-        <div class="well well-banana">
-          <div class="row">
-            <aside class="col-md-3">
-              <div data-spy="pin" data-container=".well-banana">
-                <div class="thumbnail">
-                  <img src="./media/banana.qsvga.jpg" />
+              <hr />
+              <div class="id-pin-banana">
+                <div class="row">
+                  <section class="col-md-9 trim">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                  </section>
+                  <aside class="col-md-3">
+                    <div data-spy="pin" data-container=".id-pin-banana">
+                      <img src="./media/banana.qsvga.jpg" class="thumbnail" />
+                    </div>
+                  </aside>
                 </div>
               </div>
-            </aside>
-            <section class="col-md-9">
-              <p style="height: 500px">LONG LONG BANANA DESCRIPTION</p>
-            </section>
-          </div>
+            </div>
+            <!---->
+            <h2 id="mkt">Marketing <small>.mkt * { ... }</small></h2>
+            <div class="well mkt trim size-xl">
+              <h1>Marketing!</h1>
+              <hr />
+              <h2>Info</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <hr />
+              <h2>Features</h2>
+              <dl class="numbered">
+                <dt>Feature 1</dt>
+                <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+                <dt>Feature 2</dt>
+                <dd>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                <dt>Feature 3</dt>
+                <dd>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</dd>
+                <dt>Feature 4</dt>
+                <dd>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dd>
+              </dl>
+              <hr />
+              <h2>Price</h2>
+              <table class="table">
+                <tr>
+                  <th></th>
+                  <th>Standard</th>
+                  <th>VIP</th>
+                </tr>
+                <tr>
+                  <td>Feature 1</td>
+                  <td>+</td>
+                  <td>+</td>
+                </tr>
+                <tr>
+                  <td>Feature 2</td>
+                  <td>+</td>
+                  <td>+</td>
+                </tr>
+                <tr>
+                  <td>Feature 3</td>
+                  <td>-</td>
+                  <td>+</td>
+                </tr>
+                <tr>
+                  <td>Feature 4</td>
+                  <td>-</td>
+                  <td>+</td>
+                </tr>
+              </table>
+            </div>
+            <!---->
+            <h2 id="utils">Utilities</h2>
+            <h3 id="size">Size <small>.size-* { ... }</small></h3>
+            <div class="well">
+              <p class="size-xxxl">Exxxtra large</p>
+              <p class="size-xxl">Exxtra large</p>
+              <p class="size-xl">Extra large</p>
+              <p class="size-l">Large</p>
+              <p class="size-m">Medium</p>
+              <p class="size-s">Small</p>
+              <p class="size-xs">Extra small</p>
+            </div>
+            <!---->
+          </section>
         </div>
       </div>
-      <!-- LYCHEE -->
-      <div class="zone">
-        <div class="well well-lychee">
-          <div class="row">
-            <section class="col-md-9">
-              <p style="height: 500px">LONG LONG LYCHEE DESCRIPTION</p>
-            </section>
-            <aside class="col-md-3">
-              <div data-spy="pin" data-container=".well-lychee">
-                <div class="thumbnail">
-                  <img src="./media/lychee.qsvga.jpg" />
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </div>
-      <!-- BOTTOM -->
-      <div class="zone">
-        <div class="well">
-          <p style="height: 1000px">BOTTOM</p>
-        </div>
-      </div>
-      <!-- FOOTER -->
-      <footer class="zone">
-        <div class="well">
-          Copyright &copy; 2013 Fruits, Inc
-        </div>
-      </footer>
+      <hr />
+      <p class="text-center">Copyright © 2013</p>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
