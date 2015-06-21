@@ -1,3 +1,6 @@
 [submodule "plugins/bootstrap-hover-tabs"]
 	path = plugins/bootstrap-hover-tabs
 	url = https://github.com/tonystar/bootstrap-hover-tabs.git
+[submodule "plugins/bootstrap-yamm"]
+	path = plugins/bootstrap-yamm
+	url = https://github.com/geedmo/yamm3.git
