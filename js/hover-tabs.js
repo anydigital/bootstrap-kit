@@ -1,1 +1,0 @@
-../plugins/bootstrap-hover-tabs/bootstrap-hover-tabs.js
