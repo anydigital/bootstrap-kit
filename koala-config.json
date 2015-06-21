@@ -1,0 +1,12 @@
+{
+  "mappings": [
+    {
+      "src": "make",
+      "dest": "dist"
+    }
+  ],
+  "ignores": [
+    "dist",
+    "plugins"
+  ]
+}
