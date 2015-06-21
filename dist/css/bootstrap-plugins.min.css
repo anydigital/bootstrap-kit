@@ -1,10 +1,12 @@
 /*!
- * Bootstrap Extra v1.1.0
- * http://tonystar.ru/projects/bootstrap-extra
- *
- * Copyright (c) 2013 Anton Staroverov
- * http://tonystar.ru
- *
- * Licensed under http://opensource.org/licenses/MIT
- */
-small{font-size:.85em}big{font-size:1.25em}dt{margin-bottom:10px}dl>dd:last-child{margin-bottom:0}.mkt p{margin-bottom:1em}.mkt u{text-decoration:none;border-bottom:2px solid #999}.mkt u a{text-decoration:none}.mkt hr{height:1px;margin:2em 0;border:0;background-image:-webkit-gradient(left,linear,0 0,0 100%,from(rgba(0,0,0,0)),color-stop(50%,rgba(0,0,0,0.1)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.1) 50%,rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.1) 50%,rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.1) 50%,rgba(0,0,0,0));background-repeat:no-repeat;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#00000000',GradientType=1)}.mkt h1{font-size:2.6em}.mkt h2{font-size:2.15em}.mkt h3{font-size:1.7em}.mkt h4{font-size:1.25em}.mkt h5{font-size:1em}.mkt h6{font-size:.85em}.mkt h1,.mkt h2,.mkt h3,.mkt h4,.mkt h5,.mkt h6{margin-top:1em;margin-bottom:.5em}.mkt dt{font-size:1.25em}.mkt dd{margin-bottom:1em}.mkt td{padding-left:0}.mkt .well,.mkt.well{padding:2em}.text-justify{text-align:justify}.clear{clear:both}.conceal{visibility:hidden;position:absolute;top:-1000px;left:-1000px;width:0;height:0;overflow:hidden}.trim>*:first-child{margin-top:0}.trim>*:last-child{margin-bottom:0}[class^="col-"]{position:static}.size-xxxl{font-size:2.6em}.size-xxl{font-size:2.15em}.size-xl{font-size:1.7em}.size-l{font-size:1.25em}.size-m{font-size:1em}.size-s{font-size:.85em}.size-xs{font-size:.7em}.pin-top{position:static}.pin{position:fixed;top:0;bottom:auto}.pin-bottom{position:absolute;top:auto;bottom:0}
+ * bootstrap-vertical-tabs - v1.2.1
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-11-07
+ * Copyright (c) 2014 İsmail Demirbilek
+ * License: MIT
+ */.tabs-left,.tabs-right{border-bottom:none;padding-top:2px}.tabs-left{border-right:1px solid #ddd}.tabs-right{border-left:1px solid #ddd}.tabs-left>li,.tabs-right>li{float:none;margin-bottom:2px}.tabs-left>li{margin-right:-1px}.tabs-right>li{margin-left:-1px}.tabs-left>li.active>a,.tabs-left>li.active>a:hover,.tabs-left>li.active>a:focus{border-bottom-color:#ddd;border-right-color:transparent}.tabs-right>li.active>a,.tabs-right>li.active>a:hover,.tabs-right>li.active>a:focus{border-bottom:1px solid #ddd;border-left-color:transparent}.tabs-left>li>a{border-radius:4px 0 0 4px;margin-right:0;display:block}.tabs-right>li>a{border-radius:0 4px 4px 0;margin-right:0}.sideways{margin-top:50px;border:none;position:relative}.sideways>li{height:20px;width:120px;margin-bottom:100px}.sideways>li>a{border-bottom:1px solid #ddd;border-right-color:transparent;text-align:center;border-radius:4px 4px 0 0}.sideways>li.active>a,.sideways>li.active>a:hover,.sideways>li.active>a:focus{border-bottom-color:transparent;border-right-color:#ddd;border-left-color:#ddd}.sideways.tabs-left{left:-50px}.sideways.tabs-right{right:-50px}.sideways.tabs-right>li{-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg)}.sideways.tabs-left>li{-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg);transform:rotate(-90deg)}/*!
+ * Yamm!3 - Yet another megamenu for Bootstrap 3
+ * http://geedmo.github.com/yamm3
+ * 
+ * @geedmo - Licensed under the MIT license
+ */.yamm .nav,.yamm .collapse,.yamm .dropup,.yamm .dropdown{position:static}.yamm .container{position:relative}.yamm .dropdown-menu{left:auto}.yamm .yamm-content{padding:20px 30px}.yamm .dropdown.yamm-fw .dropdown-menu{left:0;right:0}

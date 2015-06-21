@@ -1,133 +1,163 @@
-/* =============================================================================
- *
- * Bootstrap Extra v1.1.0
- * http://tonystar.ru/projects/bootstrap-extra
- *
- * -----------------------------------------------------------------------------
- *
- * The MIT License (MIT)
- *
- * Copyright (c) 2013 Anton Staroverov
- * http://tonystar.ru
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * ========================================================================== */
+// @koala-append "../../plugins/bootstrap-ie10-viewport-hack.js"
+// @koala-append "../../plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"
+// @koala-append "../../plugins/bootstrap-hover-tabs/bootstrap-hover-tabs.js"
 
 
-+function ($) { "use strict";
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
-  // PIN CLASS DEFINITION
-  // ====================
+// See the Getting Started docs for more information:
+// http://getbootstrap.com/getting-started/#support-ie10-width
 
-  var Pin = function (element, options) {
-    this.options = $.extend({}, Pin.DEFAULTS, options)
-    this.$window = $(window)
-      .on('resize.bs.pin.data-api', $.proxy(this.checkOffsets, this))
-      .on('scroll.bs.pin.data-api', $.proxy(this.checkPosition, this))
+(function () {
+  'use strict';
 
-    this.$element = $(element).wrap('<div>')
-    this.$container = $(options.container).css('position', 'relative')
-    this.spacing = (this.$container.outerHeight() - this.$container.height()) / 2
-    this.pinned = false
-
-    this.uid = 'id-' + Math.random().toString(36).substr(2, 9)
-    this.$element.addClass(this.uid)
-    this.$style = $('<style>')
-    $('head').append(this.$style)
-
-    this.checkOffsets()
-    this.checkPosition()
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.querySelector('head').appendChild(msViewportStyle)
   }
 
-  Pin.RESET = 'pin pin-top pin-bottom'
-
-  Pin.DEFAULTS = {
-    container: 'body'
-  }
-
-  Pin.prototype.checkOffsets = function () {
-    // Set the proper width to the element:
-    this.$element.width(this.$element.parent().width())
-
-    // Set proper margins for the pinned element:
-    this.$style.html([
-      '.' + this.uid + '.pin { top: ' + this.spacing + 'px }'
-    , '.' + this.uid + '.pin-bottom { bottom: ' + this.spacing + 'px }'
-    ].join('\n'))
-
-    this.minOffset = this.$element.parent().offset().top - this.spacing
-    this.maxOffset = this.$container.offset().top + this.$container.height() - this.$element.height()
-  }
-
-  Pin.prototype.checkPosition = function () {
-    if (!this.$element.is(':visible')) return
-
-    var currentOffset = this.$window.scrollTop()
-
-    var pin = currentOffset < this.minOffset ? 'top' :
-              currentOffset < this.maxOffset ? false : 'bottom'
-
-    if (this.pinned == pin) return
-
-    this.pinned = pin
-
-    this.$element.removeClass(Pin.RESET).addClass('pin' + (pin ? '-' + pin : ''))
-  }
+})();
 
 
-  // PIN PLUGIN DEFINITION
-  // =====================
+/**
+ * @preserve
+ * Project: Bootstrap Hover Dropdown
+ * Author: Cameron Spear
+ * Version: v2.1.3
+ * Contributors: Mattia Larentis
+ * Dependencies: Bootstrap's Dropdown plugin, jQuery
+ * Description: A simple plugin to enable Bootstrap dropdowns to active on hover and provide a nice user experience.
+ * License: MIT
+ * Homepage: http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/
+ */
+;(function ($, window, undefined) {
+    // outside the scope of the jQuery plugin to
+    // keep track of all dropdowns
+    var $allDropdowns = $();
 
-  var old = $.fn.pin
+    // if instantlyCloseOthers is true, then it will instantly
+    // shut other nav items when a new one is hovered over
+    $.fn.dropdownHover = function (options) {
+        // don't do anything if touch is supported
+        // (plugin causes some issues on mobile)
+        if('ontouchstart' in document) return this; // don't want to affect chaining
 
-  $.fn.pin = function (options) {
-    return this.each(function () {
-      var $this = $(this)
-      var data  = $this.data('bs.pin')
+        // the element we really care about
+        // is the dropdown-toggle's parent
+        $allDropdowns = $allDropdowns.add(this.parent());
 
-      if (!data) $this.data('bs.pin', (data = new Pin(this, options)))
-    })
-  }
+        return this.each(function () {
+            var $this = $(this),
+                $parent = $this.parent(),
+                defaults = {
+                    delay: 500,
+                    hoverDelay: 0,
+                    instantlyCloseOthers: true
+                },
+                data = {
+                    delay: $(this).data('delay'),
+                    hoverDelay: $(this).data('hover-delay'),
+                    instantlyCloseOthers: $(this).data('close-others')
+                },
+                showEvent   = 'show.bs.dropdown',
+                hideEvent   = 'hide.bs.dropdown',
+                // shownEvent  = 'shown.bs.dropdown',
+                // hiddenEvent = 'hidden.bs.dropdown',
+                settings = $.extend(true, {}, defaults, options, data),
+                timeout, timeoutHover;
 
-  $.fn.pin.Constructor = Pin
+            $parent.hover(function (event) {
+                // so a neighbor can't open the dropdown
+                if(!$parent.hasClass('open') && !$this.is(event.target)) {
+                    // stop this event, stop executing any code
+                    // in this callback but continue to propagate
+                    return true;
+                }
+
+                openDropdown(event);
+            }, function () {
+                // clear timer for hover event
+                window.clearTimeout(timeoutHover)
+                timeout = window.setTimeout(function () {
+                    $this.attr('aria-expanded', 'false');
+                    $parent.removeClass('open');
+                    $this.trigger(hideEvent);
+                }, settings.delay);
+            });
+
+            // this helps with button groups!
+            $this.hover(function (event) {
+                // this helps prevent a double event from firing.
+                // see https://github.com/CWSpear/bootstrap-hover-dropdown/issues/55
+                if(!$parent.hasClass('open') && !$parent.is(event.target)) {
+                    // stop this event, stop executing any code
+                    // in this callback but continue to propagate
+                    return true;
+                }
+
+                openDropdown(event);
+            });
+
+            // handle submenus
+            $parent.find('.dropdown-submenu').each(function (){
+                var $this = $(this);
+                var subTimeout;
+                $this.hover(function () {
+                    window.clearTimeout(subTimeout);
+                    $this.children('.dropdown-menu').show();
+                    // always close submenu siblings instantly
+                    $this.siblings().children('.dropdown-menu').hide();
+                }, function () {
+                    var $submenu = $this.children('.dropdown-menu');
+                    subTimeout = window.setTimeout(function () {
+                        $submenu.hide();
+                    }, settings.delay);
+                });
+            });
+
+            function openDropdown(event) {
+                // clear dropdown timeout here so it doesnt close before it should
+                window.clearTimeout(timeout);
+                // restart hover timer
+                window.clearTimeout(timeoutHover);
+                
+                // delay for hover event.  
+                timeoutHover = window.setTimeout(function () {
+                    $allDropdowns.find(':focus').blur();
+
+                    if(settings.instantlyCloseOthers === true)
+                        $allDropdowns.removeClass('open');
+                    
+                    // clear timer for hover event
+                    window.clearTimeout(timeoutHover);
+                    $this.attr('aria-expanded', 'true');
+                    $parent.addClass('open');
+                    $this.trigger(showEvent);
+                }, settings.hoverDelay);
+            }
+        });
+    };
+
+    $(document).ready(function () {
+        // apply dropdownHover to all elements with the data-hover="dropdown" attribute
+        $('[data-hover="dropdown"]').dropdownHover();
+    });
+})(jQuery, window);
 
 
-  // PIN NO CONFLICT
-  // ===============
-
-  $.fn.pin.noConflict = function () {
-    $.fn.pin = old
-    return this
-  }
-
-
-  // PIN DATA-API
-  // ============
-
-  $(window).on('load', function () {
-    $('[data-spy="pin"]').each(function () {
-      var $this = $(this)
-      var data = $this.data()
-
-      $this.pin(data)
-    })
-  })
-
-}(jQuery);
+(function ($) {
+  $(function () {
+    $(document).on('mouseenter', '[data-hover="tab"]', function () {
+      $(this).tab('show');
+    });
+  });
+})(jQuery);

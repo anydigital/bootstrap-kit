@@ -1,164 +1,118 @@
-/* =============================================================================
- *
- * Bootstrap Extra v1.1.0
- * http://tonystar.ru/projects/bootstrap-extra
- *
- * -----------------------------------------------------------------------------
- *
- * The MIT License (MIT)
- *
- * Copyright (c) 2013 Anton Staroverov
- * http://tonystar.ru
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * ========================================================================== */
-
-
-small {
-  font-size: 0.85em;
+/*!
+ * bootstrap-vertical-tabs - v1.2.1
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-11-07
+ * Copyright (c) 2014 İsmail Demirbilek
+ * License: MIT
+ */
+.tabs-left,
+.tabs-right {
+  border-bottom: none;
+  padding-top: 2px;
 }
-big {
-  font-size: 1.25em;
+.tabs-left {
+  border-right: 1px solid #ddd;
 }
-dt {
-  margin-bottom: 10px;
+.tabs-right {
+  border-left: 1px solid #ddd;
 }
-dl > dd:last-child {
-  margin-bottom: 0;
+.tabs-left > li,
+.tabs-right > li {
+  float: none;
+  margin-bottom: 2px;
 }
-.mkt p {
-  margin-bottom: 1em;
+.tabs-left > li {
+  margin-right: -1px;
 }
-.mkt u {
-  text-decoration: none;
-  border-bottom: 2px solid #999999;
+.tabs-right > li {
+  margin-left: -1px;
 }
-.mkt u a {
-  text-decoration: none;
+.tabs-left > li.active > a,
+.tabs-left > li.active > a:hover,
+.tabs-left > li.active > a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
 }
-.mkt hr {
-  height: 1px;
-  margin: 2em 0;
-  border: 0;
-  background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0));
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
+.tabs-right > li.active > a,
+.tabs-right > li.active > a:hover,
+.tabs-right > li.active > a:focus {
+  border-bottom: 1px solid #ddd;
+  border-left-color: transparent;
 }
-.mkt h1 {
-  font-size: 2.6em;
+.tabs-left > li > a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display: block;
 }
-.mkt h2 {
-  font-size: 2.15em;
+.tabs-right > li > a {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
 }
-.mkt h3 {
-  font-size: 1.7em;
+.sideways {
+  margin-top: 50px;
+  border: none;
+  position: relative;
 }
-.mkt h4 {
-  font-size: 1.25em;
+.sideways > li {
+  height: 20px;
+  width: 120px;
+  margin-bottom: 100px;
 }
-.mkt h5 {
-  font-size: 1em;
+.sideways > li > a {
+  border-bottom: 1px solid #ddd;
+  border-right-color: transparent;
+  text-align: center;
+  border-radius: 4px 4px 0px 0px;
 }
-.mkt h6 {
-  font-size: 0.85em;
+.sideways > li.active > a,
+.sideways > li.active > a:hover,
+.sideways > li.active > a:focus {
+  border-bottom-color: transparent;
+  border-right-color: #ddd;
+  border-left-color: #ddd;
 }
-.mkt h1,
-.mkt h2,
-.mkt h3,
-.mkt h4,
-.mkt h5,
-.mkt h6 {
-  margin-top: 1em;
-  margin-bottom: .5em;
+.sideways.tabs-left {
+  left: -50px;
 }
-.mkt dt {
-  font-size: 1.25em;
+.sideways.tabs-right {
+  right: -50px;
 }
-.mkt dd {
-  margin-bottom: 1em;
+.sideways.tabs-right > li {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-.mkt td {
-  padding-left: 0;
+.sideways.tabs-left > li {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-.mkt .well,
-.mkt.well {
-  padding: 2em;
-}
-.text-justify {
-  text-align: justify;
-}
-.clear {
-  clear: both;
-}
-.conceal {
-  visibility: hidden;
-  position: absolute;
-  top: -1000px;
-  left: -1000px;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.trim > *:first-child {
-  margin-top: 0;
-}
-.trim > *:last-child {
-  margin-bottom: 0;
-}
-[class^="col-"] {
+/*!
+ * Yamm!3 - Yet another megamenu for Bootstrap 3
+ * http://geedmo.github.com/yamm3
+ * 
+ * @geedmo - Licensed under the MIT license
+ */
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
   position: static;
 }
-.size-xxxl {
-  font-size: 2.6em;
+.yamm .container {
+  position: relative;
 }
-.size-xxl {
-  font-size: 2.15em;
+.yamm .dropdown-menu {
+  left: auto;
 }
-.size-xl {
-  font-size: 1.7em;
+.yamm .yamm-content {
+  padding: 20px 30px;
 }
-.size-l {
-  font-size: 1.25em;
-}
-.size-m {
-  font-size: 1em;
-}
-.size-s {
-  font-size: 0.85em;
-}
-.size-xs {
-  font-size: 0.7em;
-}
-.pin-top {
-  position: static;
-}
-.pin {
-  position: fixed;
-  top: 0;
-  bottom: auto;
-}
-.pin-bottom {
-  position: absolute;
-  top: auto;
-  bottom: 0;
+.yamm .dropdown.yamm-fw .dropdown-menu {
+  left: 0;
+  right: 0;
 }
