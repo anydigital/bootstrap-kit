@@ -7,3 +7,6 @@
 [submodule "plugins/bootstrap-vertical-tabs"]
 	path = plugins/bootstrap-vertical-tabs
 	url = https://github.com/dbtek/bootstrap-vertical-tabs.git
+[submodule "plugins/bootstrap-hover-dropdown"]
+	path = plugins/bootstrap-hover-dropdown
+	url = https://github.com/CWSpear/bootstrap-hover-dropdown.git
