@@ -2,6 +2,14 @@
 // @koala-append "../../plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"
 // @koala-append "../../plugins/bootstrap-hover-tabs/bootstrap-hover-tabs.js"
 
+(function($) {
+  $(function() {
+    $(document).on('click', '.yamm .dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+  });
+})(jQuery);
+
 
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
@@ -156,7 +164,7 @@
 
 (function ($) {
   $(function () {
-    $(document).on('mouseenter', '[data-hover="tab"]', function () {
+    $(document).on('mouseenter', '[data-toggle="tab"]', function () {
       $(this).tab('show');
     });
   });
