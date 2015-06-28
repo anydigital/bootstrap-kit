@@ -1,7 +1,7 @@
 {
   "mappings": [
     {
-      "src": "make",
+      "src": "src",
       "dest": "dist"
     }
   ],
