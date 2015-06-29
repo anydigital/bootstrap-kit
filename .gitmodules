@@ -10,3 +10,6 @@
 [submodule "plugins/bootstrap-hover-dropdown"]
 	path = plugins/bootstrap-hover-dropdown
 	url = https://github.com/CWSpear/bootstrap-hover-dropdown.git
+[submodule "plugins/bootstrap-inverse"]
+	path = plugins/bootstrap-inverse
+	url = https://github.com/tonystar/bootstrap-inverse.git
