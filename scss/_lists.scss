@@ -1,0 +1,8 @@
+.list-spaced {
+  > li,
+  .list-item {
+    &:not(:first-child) {
+      margin-top: $spacer-y / 2;
+    }
+  }
+}
