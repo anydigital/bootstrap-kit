@@ -1,0 +1,10 @@
+// Rotated & Flipped Icons
+// -------------------------
+
+.#{$fa-css-prefix}-rotate-30   { @include fa-icon-rotate(30deg, 0); }
+.#{$fa-css-prefix}-rotate-45   { @include fa-icon-rotate(45deg, 0); }
+.#{$fa-css-prefix}-rotate-60   { @include fa-icon-rotate(60deg, 1); }
+
+.#{$fa-css-prefix}-rotate-30-  { @include fa-icon-rotate(-30deg, 0); }
+.#{$fa-css-prefix}-rotate-45-  { @include fa-icon-rotate(-45deg, 0); }
+.#{$fa-css-prefix}-rotate-60-  { @include fa-icon-rotate(-60deg, 3); }
