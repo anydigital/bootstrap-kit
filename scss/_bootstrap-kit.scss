@@ -1,6 +1,12 @@
+// Core variables and mixins
+@import "variables";
+
 // Core CSS
 @import "type";
 @import "lists";
 
 // Components
 @import "icons";
+
+// Utility classes
+@import "utilities";
