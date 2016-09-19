@@ -1,10 +1,9 @@
 @include bg-variant('.bg-primary-dark', $brand-primary-dark);
 
-.bg-primary-dark {
-  &.glow-top {
-    @include gradient-y(lighten($brand-primary-dark, 10%), $brand-primary-dark, 0%, 50%);
-  }
-  &.glow-center {
-    @include gradient-radial(lighten($brand-primary-dark, 10%), $brand-primary-dark);
-  }
+.bg-glow-top {
+  @include gradient-y(rgba(255,255,255,.15), transparent, 0%, 50%);
+}
+
+.bg-glow-center {
+  @include gradient-radial(rgba(255,255,255,.15), transparent);
 }
