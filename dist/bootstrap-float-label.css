@@ -1,0 +1,53 @@
+.has-float-label {
+  position: relative; }
+  .has-float-label label {
+    position: absolute;
+    left: 0.75rem;
+    top: -0.5em;
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+    cursor: text;
+    font-size: 75%;
+    opacity: 1;
+    -webkit-transition: all .2s;
+            transition: all .2s; }
+  .has-float-label label {
+    z-index: 3;
+    line-height: 1;
+    padding: 0 1px; }
+    .has-float-label label::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      background: white;
+      height: 1px;
+      top: 50%;
+      left: -.2em;
+      right: -.2em;
+      z-index: -1; }
+  .has-float-label .form-control::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: all .2s;
+            transition: all .2s; }
+  .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+    opacity: 0; }
+  .has-float-label .form-control:placeholder-shown:not(:focus) + label {
+    left: 0.75rem;
+    top: 0.6em;
+    -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
+    opacity: .5; }
+
+.input-group .has-float-label {
+  display: table-cell; }
+  .input-group .has-float-label .form-control {
+    border-radius: 0.25rem; }
+  .input-group .has-float-label:not(:last-child) .form-control {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+  .input-group .has-float-label:not(:first-child) .form-control {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -1px; }
