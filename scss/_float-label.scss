@@ -1,7 +1,7 @@
 .has-float-label {
-  @include float-label-container($input-padding-x, -.5em);
+  @include float-label-container;
 
-  label {
+  @include float-label($input-padding-x, -.5em) {
     z-index: 3;
     line-height: 1;
     padding: 0 1px;
@@ -20,7 +20,9 @@
   }
 
   .form-control {
-    @include float-label-input($input-padding-x, .6em);
+    @include float-label-input;
+
+    @include float-label-scaled($input-padding-x, .6em);
   }
 }
 
