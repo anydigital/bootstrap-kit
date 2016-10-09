@@ -2,17 +2,15 @@
   position: relative; }
   .has-float-label label {
     position: absolute;
-    left: 0.75rem;
-    top: -0.5em;
-    -webkit-transform-origin: left top;
-        -ms-transform-origin: left top;
-            transform-origin: left top;
+    left: 0;
+    top: 0;
     cursor: text;
     font-size: 75%;
     opacity: 1;
     -webkit-transition: all .2s;
-            transition: all .2s; }
-  .has-float-label label {
+            transition: all .2s;
+    top: -.5em;
+    left: 0.75rem;
     z-index: 3;
     line-height: 1;
     padding: 0 1px; }
@@ -33,12 +31,9 @@
   .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
     opacity: 0; }
   .has-float-label .form-control:placeholder-shown:not(:focus) + label {
-    left: 0.75rem;
-    top: 0.6em;
-    -webkit-transform: scale(2);
-        -ms-transform: scale(2);
-            transform: scale(2);
-    opacity: .5; }
+    font-size: 150%;
+    opacity: .5;
+    top: .3em; }
 
 .input-group .has-float-label {
   display: table-cell; }
