@@ -137,3 +137,9 @@ a.bg-primary-dark:focus, a.bg-primary-dark:hover {
   left: 0;
   right: 0;
   width: 100%; }
+
+.text-default {
+  color: #373a3c !important; }
+
+a.text-default:focus, a.text-default:hover {
+  color: #1f2021 !important; }
