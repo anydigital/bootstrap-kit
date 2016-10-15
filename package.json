@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap-kit",
-  "version": "1.0.0-dev",
+  "name": "@highweb/bootstrap-kit",
+  "version": "4.0.0-dev",
   "scripts": {},
   "repository": {
     "type": "git",
