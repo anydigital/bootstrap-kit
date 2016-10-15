@@ -8,11 +8,38 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="dist/bootstrap-kit.css"/>
+  <style>
+    .navbar-light {
+      background: rgba(255,255,255,0.9);
+    }
+    .twitter-tweet-button {
+      margin-left: .5rem;
+    }
+    .jumbotron .lead {
+      font-size: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="jumbotron jumbotron-fluid">
+  <header class="navbar navbar-light navbar-fixed-top">
     <div class="container">
+      <a class="navbar-brand" href="#">Bootstrap Kit</a>
+      <div class="pull-lg-right" style="margin: .4rem 0 -.4rem">
+        <a class="github-button" href="https://github.com/highweb/bootstrap-kit" data-style="mega" data-count-href="/highweb/bootstrap-kit/stargazers" data-count-api="/repos/highweb/bootstrap-kit#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star highweb/bootstrap-kit on GitHub">Star</a>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=BootstrapKit" class="twitter-hashtag-button" data-size="large" data-text="All you want from Bootstrap but don&#39;t have in Bootstrap (yet)." data-url="https://bootstrap-kit.highweb.tech" data-show-count="false">Tweet #BootstrapKit</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="jumbotron jumbotron-fluid bg-inverse bg-glow-top">
+    <div class="container p-t-3">
       <h1 class="display-1">Bootstrap Kit</h1>
+      <p class="lead">All you want from Bootstrap but don't have in Bootstrap (yet).</p>
+      <p class="lead">
+        <a class="btn btn-outline-info" href="https://github.com/highweb/bootstrap-kit" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+        <a class="btn btn-outline-info" href="https://www.npmjs.com/package/@highweb/bootstrap-kit" target="_blank">NPM</a>
+      </p>
+      <p>Currently v4.0.0-dev</p>
     </div>
   </header>
 
@@ -43,5 +70,8 @@
       <p>© 2016 Bootstrap Kit. Proudly made by <a href="https://twitter.com/tonystarring" target="_blank">Anton Staroverov</a>.</p>
     </div>
   </footer>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
