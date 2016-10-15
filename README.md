@@ -1,4 +1,4 @@
-bootstrap-extra
-===============
+Bootstrap Kit
+=============
 
-Bootstrap Extra
+All you want from Bootstrap but don't have in Bootstrap (yet).
