@@ -24,11 +24,20 @@
       h2 {
         font-size: 2rem !important;
       }
+      .navbar-brand {
+        margin-right: 0;
+      }
+      .share-buttons iframe:first-child {
+        display: none;
+      }
     }
     .navbar-light {
       background: rgba(255,255,255,0.9);
     }
-    .twitter-tweet-button {
+    .share-buttons {
+      margin: .4rem 0 -.4rem;
+    }
+    .share-buttons .twitter-tweet-button {
       margin-left: .5rem;
     }
     .jumbotron .lead {
@@ -37,10 +46,10 @@
   </style>
 </head>
 <body>
-  <header class="navbar navbar-light navbar-fixed-top">
+  <header class="navbar navbar-light navbar-fixed-top p-x-0">
     <div class="container">
       <a class="navbar-brand" href="#">Bootstrap Kit</a>
-      <div class="pull-lg-right" style="margin: .4rem 0 -.4rem">
+      <div class="share-buttons pull-xs-right">
         <a class="github-button" href="https://github.com/highweb/bootstrap-kit" data-style="mega" data-count-href="/highweb/bootstrap-kit/stargazers" data-count-api="/repos/highweb/bootstrap-kit#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star highweb/bootstrap-kit on GitHub">Star</a>
         <a href="https://twitter.com/intent/tweet?button_hashtag=BootstrapKit" class="twitter-hashtag-button" data-size="large" data-text="All you want from Bootstrap but don&#39;t have in Bootstrap (yet)." data-url="https://bootstrap-kit.highweb.tech" data-show-count="false">Tweet #BootstrapKit</a>
       </div>
