@@ -2,7 +2,8 @@ Bootstrap Kit
 =============
 
 [![npm version](https://img.shields.io/npm/v/@highweb/bootstrap-kit.svg)](https://www.npmjs.com/package/@highweb/bootstrap-kit)
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=flat&label=retweet)](https://twitter.com/highwebtech/status/787591818305212416)
+[![retweet](https://img.shields.io/badge/re-tweet-00bfff.svg)](https://twitter.com/highwebtech/status/787591818305212416)
+[![dribbble](https://img.shields.io/badge/dribbble-%E2%99%A5-ff1493.svg)](https://dribbble.com/shots/3028165-Bootstrap-Kit-v4)
 
 All you want from Bootstrap but don't have in Bootstrap (yet).
 
