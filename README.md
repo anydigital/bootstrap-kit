@@ -1,6 +1,8 @@
 Bootstrap Kit
 =============
 
+[![npm version](https://img.shields.io/npm/v/@highweb/bootstrap-kit.svg)](https://www.npmjs.com/package/@highweb/bootstrap-kit)
+
 All you want from Bootstrap but don't have in Bootstrap (yet).
 
 <img src="https://cdn.rawgit.com/highweb/bootstrap-kit/40d8af7/bootstrap-kit.png"/>
