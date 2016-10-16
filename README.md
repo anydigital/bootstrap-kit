@@ -2,6 +2,7 @@ Bootstrap Kit
 =============
 
 [![npm version](https://img.shields.io/npm/v/@highweb/bootstrap-kit.svg)](https://www.npmjs.com/package/@highweb/bootstrap-kit)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=flat&label=retweet)](https://twitter.com/highwebtech/status/787591818305212416)
 
 All you want from Bootstrap but don't have in Bootstrap (yet).
 
