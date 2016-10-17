@@ -34,4 +34,4 @@ That's it! Now discover and play with new components.
 - **Striped backgrounds**
 - **Background glowers**
 
-Din't find a component? [Request](https://github.com/highweb/bootstrap-kit/issues/new) or [contribute](https://github.com/highweb/bootstrap-kit/pulls)!
+Didn't find a component? [Request](https://github.com/highweb/bootstrap-kit/issues/new) or [contribute](https://github.com/highweb/bootstrap-kit/pulls)!
