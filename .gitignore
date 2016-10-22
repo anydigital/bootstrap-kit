@@ -4,3 +4,4 @@
 /node_modules/font-awesome/*
 !/node_modules/font-awesome/css/
 !/node_modules/font-awesome/fonts/
+_site/

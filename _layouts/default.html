@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Bootstrap Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="dist/bootstrap-kit.css"/>
+  <style>
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    h3 .btn {
+      margin-top: -.5em;
+      margin-left: .5em;
+    }
+    .navbar-light {
+      background: rgba(255,255,255,0.9);
+    }
+    .share-buttons {
+      margin: .4rem 0 -.4rem;
+    }
+    .share-buttons .twitter-tweet-button {
+      vertical-align: top;
+      height: 28px;
+      margin-left: .5rem;
+    }
+    .jumbotron .lead {
+      font-size: 2rem;
+    }
+    @media (max-width: 543px) {
+      h1 {
+        font-size: 3rem !important;
+      }
+      h2 {
+        font-size: 2rem !important;
+      }
+      .navbar-brand {
+        margin-right: 0;
+      }
+      .jumbotron .lead {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  {{ content }}
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
