@@ -13,7 +13,7 @@ All you want from Bootstrap but don't have in Bootstrap (yet).
 
 ## Demo
 
-https://bootstrap-kit.highweb.tech/
+https://bootstrap-kit.com.
 
 
 ## Usage
@@ -28,10 +28,11 @@ That's it! Now discover and play with new components.
 
 ## Components
 
-- **Float labels** powered by [Pure-CSS Float Label](https://github.com/tonystar/float-label-css) and [Bootstrap Float Label](https://github.com/tonystar/bootstrap-float-label)
+- **Float labels** powered by [Pure-CSS Float Label](https://github.com/tonystar/float-label-css)
 - **Icon rotators** to be used with [Font Awesome](http://fontawesome.io/)
 - **Spaced lists**
 - **Striped backgrounds**
 - **Background glowers**
+- **Layouts** <sup>**v4.0.1+**</sup>
 
 Didn't find a component? [Request](https://github.com/highweb/bootstrap-kit/issues/new) or [contribute](https://github.com/highweb/bootstrap-kit/pulls)!
