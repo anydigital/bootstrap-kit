@@ -1,14 +1,14 @@
 Bootstrap Kit
 =============
 
-[![npm version](https://img.shields.io/npm/v/@highweb/bootstrap-kit.svg)](https://www.npmjs.com/package/@highweb/bootstrap-kit)
-[![Join the chat at https://gitter.im/highweb/bootstrap-kit](https://img.shields.io/gitter/room/highweb/bootstrap-kit.svg)](https://gitter.im/highweb/bootstrap-kit)
-[![retweet](https://img.shields.io/badge/re-tweet-00bfff.svg)](https://twitter.com/highwebtech/status/787591818305212416)
-[![dribbble](https://img.shields.io/badge/dribbble-%E2%99%A5-ff1493.svg)](https://dribbble.com/shots/3028165-Bootstrap-Kit-v4)
+[![npm](https://img.shields.io/npm/v/@highweb/bootstrap-kit.svg)](https://www.npmjs.com/package/@highweb/bootstrap-kit)
+[![gitter](https://img.shields.io/gitter/room/highweb/bootstrap-kit.svg)](https://gitter.im/highweb/bootstrap-kit)
+[![retweet](https://img.shields.io/badge/retweet--00bfff.svg)](https://twitter.com/highwebtech/status/787591818305212416)
+[![dribbble](https://img.shields.io/badge/dribbble--ff1493.svg)](https://dribbble.com/shots/3028165-Bootstrap-Kit-v4)
 
 All you want from Bootstrap but don't have in Bootstrap (yet).
 
-<img src="https://cdn.rawgit.com/highweb/bootstrap-kit/40d8af7/bootstrap-kit.png"/>
+<img src="https://cdn.rawgit.com/highweb/bootstrap-kit/abc96624574b391afaf6a1684210f4c4bcc753b9/bootstrap-kit.gif" width="400"/>
 
 
 ## Demo
