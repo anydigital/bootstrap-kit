@@ -8,7 +8,8 @@ Bootstrap Kit
 
 All you want from Bootstrap but don't have in Bootstrap (yet).
 
-<img src="https://cdn.rawgit.com/highweb/bootstrap-kit/abc96624574b391afaf6a1684210f4c4bcc753b9/bootstrap-kit.gif" width="400"/>
+<img src="https://cdn.rawgit.com/highweb/bootstrap-kit/4cf449bb2c1237a7082993c7d3365552fb7d3e11/bootstrap-kit-1.gif" width="400"/>
+<img src="https://cdn.rawgit.com/highweb/bootstrap-kit/4cf449bb2c1237a7082993c7d3365552fb7d3e11/bootstrap-kit-2.gif" width="400"/>
 
 
 ## Demo
