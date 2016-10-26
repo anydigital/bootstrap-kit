@@ -3,14 +3,14 @@
 <div class="col-md-6 col-lg-4 m-b-2">
 
 <form class="card card-block bg-faded">
-  <div class="form-group has-float-label">
-    <input class="form-control" id="email" type="email" placeholder="email@example.com"/>
-    <label for="email">Email</label>
-  </div>
-  <div class="form-group has-float-label">
-    <input class="form-control" id="password" type="password" placeholder="••••••••"/>
-    <label for="password">Password</label>
-  </div>
+  <label class="form-group has-float-label">
+    <input class="form-control" type="email" placeholder="email@example.com"/>
+    <span>Email</span>
+  </label>
+  <label class="form-group has-float-label">
+    <input class="form-control" type="password" placeholder="••••••••"/>
+    <span>Password</span>
+  </label>
   <button class="btn btn-primary" type="submit">Log in</button>
 </form>
 
@@ -20,29 +20,29 @@
 <!-- @TODO: Adapt for mobile. -->
 <form class="input-group hidden-xs-down">
   <span class="input-group-addon"><i class="fa fa-lg fa-map-marker"></i></span>
-  <span class="has-float-label">
-    <input class="form-control" id="country" type="text" placeholder="United States" value="United States"/>
-    <label for="country">Country</label>
-  </span>
-  <span class="has-float-label" style="max-width: 10em">
-    <input class="form-control" id="city" type="text" placeholder="New York" value="New York"/>
-    <label for="city">City</label>
-  </span>
-  <span class="has-float-label">
-    <input class="form-control" id="address" type="text" placeholder="366 5th Ave" value="366 5th Ave"/>
-    <label for="address">Address</label>
-  </span>
-  <span class="has-float-label" style="max-width: 8em">
-    <input class="form-control" id="postal" type="text" placeholder="NY 10001" value="NY 10001"/>
-    <label for="postal">Postal</label>
-  </span>
+  <label class="has-float-label">
+    <input class="form-control" type="text" placeholder="United States" value="United States"/>
+    <span>Country</span>
+  </label>
+  <label class="has-float-label" style="max-width: 10em">
+    <input class="form-control" type="text" placeholder="New York" value="New York"/>
+    <span>City</span>
+  </label>
+  <label class="has-float-label">
+    <input class="form-control" type="text" placeholder="366 5th Ave" value="366 5th Ave"/>
+    <span>Address</span>
+  </label>
+  <label class="has-float-label" style="max-width: 8em">
+    <input class="form-control" type="text" placeholder="NY 10001" value="NY 10001"/>
+    <span>Postal</span>
+  </label>
 </form>
 
 <form class="input-group m-t-2">
-  <span class="has-float-label">
-    <input class="form-control" id="q" type="text" placeholder="new iPhone"/>
-    <label for="q">I'm looking for</label>
-  </span>
+  <label class="has-float-label">
+    <input class="form-control" type="text" placeholder="new iPhone"/>
+    <span>I'm looking for</span>
+  </label>
   <span class="input-group-btn">
     <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
   </span>
@@ -50,10 +50,10 @@
 
 <!-- @TODO: Adapt for mobile. -->
 <form class="input-group m-t-2 hidden-xs-down">
-  <span class="has-float-label">
-    <input class="form-control" id="email2" type="email" placeholder="email@example.com"/>
-    <label for="email2">Enter your email address</label>
-  </span>
+  <label class="has-float-label">
+    <input class="form-control" type="email" placeholder="email@example.com"/>
+    <span>Enter your email address</span>
+  </label>
   <span class="input-group-btn">
     <button class="btn btn-primary" type="submit">Subscribe to newsletter</button>
   </span>

@@ -14,7 +14,7 @@
   "homepage": "https://highweb.tech/bootstrap-kit",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.4",
-    "bootstrap-float-label": "4.0.0",
+    "bootstrap-float-label": "4.0.1",
     "font-awesome": "^4.6.3"
   }
 }
