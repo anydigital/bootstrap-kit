@@ -21,7 +21,7 @@ https://bootstrap-kit.com.
 
 Include `bootstrap-kit.min.css` right after your `bootstrap.min.css`:
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/highweb/bootstrap-kit/v4.0.0/dist/bootstrap-kit.min.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/highweb/bootstrap-kit/v4.0.1/dist/bootstrap-kit.min.css"/>
 ```
 
 That's it! Now discover and play with new components.
