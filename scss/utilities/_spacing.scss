@@ -1,13 +1,21 @@
+.pos-rel {
+  position: relative;
+}
+
 .pos-abs {
   position: absolute;
 }
 
-.pos-t-100 {
-  top: 100%;
+.pos-fix {
+  position: fixed;
 }
 
-.pos-w-100 {
+.pos-tl {
+  top: 0;
   left: 0;
+}
+
+.pos-tr {
+  top: 0;
   right: 0;
-  width: 100%;
 }
