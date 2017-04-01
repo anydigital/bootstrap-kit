@@ -1,4 +1,0 @@
-[submodule "_layouts"]
-	path = _layouts
-	url = https://github.com/highweb/bootstrap-layouts.git
-	branch = master
