@@ -2,6 +2,16 @@
   margin-bottom: .5em;
 }
 
+.row-flex {
+  font-size: 0;
+}
+.row-flex > [class^="col-"] {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  font-size: 1rem;
+}
+
 .list-spaced > li:not(:first-child),
 .list-spaced .list-item:not(:first-child) {
   margin-top: 0.5rem;
@@ -54,7 +64,7 @@
   padding-bottom: .425rem;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 576px) {
   .navbar-toggleable-xs {
     height: auto !important;
   }
@@ -105,7 +115,29 @@
   -webkit-transition: all .2s;
           transition: all .2s;
 }
+.has-float-label .form-control::-moz-placeholder {
+  opacity: 1;
+  transition: all .2s;
+}
+.has-float-label .form-control:-ms-input-placeholder {
+  opacity: 1;
+  transition: all .2s;
+}
+.has-float-label .form-control::placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+}
 .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
+  opacity: 0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+  opacity: 0;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
   opacity: 0;
 }
 .has-float-label .form-control:placeholder-shown:not(:focus) + * {
@@ -115,9 +147,27 @@
 }
 
 .input-group .has-float-label {
-  display: table-cell;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .input-group .has-float-label .form-control {
+  width: 100%;
   border-radius: 0.25rem;
 }
 .input-group .has-float-label:not(:last-child), .input-group .has-float-label:not(:last-child) .form-control {
@@ -131,7 +181,6 @@
 }
 
 .bg-primary-dark {
-  color: #fff !important;
   background-color: #025aa5 !important;
 }
 
@@ -143,7 +192,6 @@ a.bg-primary-dark:focus, a.bg-primary-dark:hover {
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#26FFFFFF', endColorstr='#00000000', GradientType=0);
 }
 
 .bg-glow-center {
@@ -158,24 +206,32 @@ a.bg-primary-dark:focus, a.bg-primary-dark:hover {
   background-size: 1rem 1rem;
 }
 
+.pos-rel {
+  position: relative;
+}
+
 .pos-abs {
   position: absolute;
 }
 
-.pos-t-100 {
-  top: 100%;
+.pos-fix {
+  position: fixed;
 }
 
-.pos-w-100 {
+.pos-tl {
+  top: 0;
   left: 0;
+}
+
+.pos-tr {
+  top: 0;
   right: 0;
-  width: 100%;
 }
 
 .text-default {
-  color: #373a3c !important;
+  color: #292b2c !important;
 }
 
 a.text-default:focus, a.text-default:hover {
-  color: #1f2021 !important;
+  color: #101112 !important;
 }
