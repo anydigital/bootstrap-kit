@@ -128,19 +128,19 @@
   -webkit-transition: all .2s;
           transition: all .2s;
 }
-.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+.has-float-label .form-control:not(:focus)::-webkit-input-placeholder {
   opacity: 0;
 }
-.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
+.has-float-label .form-control:not(:focus)::-moz-placeholder {
   opacity: 0;
 }
-.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+.has-float-label .form-control:not(:focus):-ms-input-placeholder {
   opacity: 0;
 }
-.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
+.has-float-label .form-control:not(:focus)::placeholder {
   opacity: 0;
 }
-.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+.has-float-label .form-control:not(:focus) + * {
   font-size: 150%;
   opacity: .5;
   top: .3em;
